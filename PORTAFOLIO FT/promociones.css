@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+body {
+    background-image: url('img/wallpaperbetter.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+background-position: center;
+height: 100vh;
+background-attachment: fixed;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    flex-direction: column;
+}
+
+a.active,a:hover{
+    font-weight: 100;
+    background: linear-gradient(90deg, rgba(2, 0, 2, 0.21) 40%);
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    nav ul li a{
+     font-size: 18px;
+    }
+}
+
+@media (max-width: 952px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000000b6;
+        top: 115px;
+        left: -150%;
+        flex-direction: column;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+.contenedor-header {
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+}
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: #1CB698;
+}
+
+
+
+
+.mover-abajo {
+    font-family: "Rubik Doodle Shadow";
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10%; 
+    text-align: center;
+}
+
+.mover-abajo {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 15%; 
+    text-align: center;
+}
+
+.mover-abajo a {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    color: rgb(255, 255, 255); 
+    font-size: 6vw; 
+    font-weight: bold; 
+    animation: animate 1s linear infinite;
+    text-shadow: 0 0 3vw green, 0 0 3vw cyan; 
+}
+
+@media (max-width: 600px) {
+    .mover-abajo {
+        margin-top: 40%; 
+    }
+
+    .mover-abajo a {
+        font-size: 10vw; 
+        text-shadow: 0 0 5vw green, 0 0 5vw cyan; 
+    }
+}
+
+
+
+/* Estilo para los cuadrados */
+.cuadrados-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fila {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuadrado {
+    width: 450px; 
+    height: 450px; 
+    background-color: white; 
+    margin-top: 100px; /* Ajusta la separación vertical */
+    margin: 80px; 
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+}
+
+
+/* IMAGENES  */
+
+.imagen-1 {
+    background-image: url('img/1.jpg'); /* cuadro 1  */
+}
+.imagen-2 {
+    background-image: url('img/2.jpg');
+}
+.imagen-3 {
+    background-image: url('img/3.jpg'); /
+}
+.imagen-4 {
+    background-image: url('img/');
+}
+.imagen-5 {
+    background-image: url('img/');
+}
+.imagen-6 {
+    background-image: url('img/');
+}
+.imagen-7 {
+    background-image: url('img/');
+}
+.imagen-8 {
+    background-image: url('img/');
+}
+.imagen-9 {
+    background-image: url('img/');
+}
+.imagen-10 {
+    background-image: url('img/');
+}
+
+
+
+
+
+
+
+
+/* BOTONES DEBAJO DE LOS CUADRADOS */
+.imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+
+.botones-container {
+    position: absolute;
+    bottom: -60px; /* Ajusta la distancia desde la parte inferior */
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio entre los botones */
+    padding: 10px 0; /* Ajusta el relleno de los botones */
+
+}
+
+.botones-container {
+    position: absolute;
+    bottom: -60px; /* Ajusta la distancia desde la parte inferior */
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio entre los botones */
+    padding: 10px 0; /* Ajusta el relleno de los botones */
+
+}
+
+.botones-container button {
+    padding: 15px 25px; /* Ajusta el tamaño de los botones */
+    margin: 0 5px; /* Ajusta la separación entre los botones */
+    border: none;
+    border-radius: 20px;
+    background-color: #1CB698;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .cuadrados-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .fila {
+        flex-direction: column; 
+        margin-bottom: 20px; 
+    }
+    .cuadrado {
+        width: 80vw; 
+        height: 80vw; 
+        max-width: 300px; 
+        margin-top: 100px;
+    }
+    .botones-container {
+        justify-content: center; /* Centra los botones horizontalmente */
+    }
+    .botones-container button {
+        max-width: 300px; /* Establecer el mismo ancho máximo que los cuadros */
+        padding: 1px 5px; /* Ajustar el padding para hacer los botones más pequeños */
+        font-size: 14px; /* Ajustar el tamaño de fuente para hacer los botones más pequeños */
+    }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .cuadrados-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .fila {
+        flex-direction: column; 
+        margin-bottom: 20px; 
+    }
+    .cuadrado {
+        width: 80vw; 
+        height: 80vw; 
+        max-width: 300px; 
+        margin-top: 100px;
+    }
+    .botones-container {
+        justify-content: center; /* Centra los botones horizontalmente */
+    }
+    .botones-container button {
+        max-width: 300px; /* Establecer el mismo ancho máximo que los cuadros */
+        padding: 1px 5px; /* Ajustar el padding para hacer los botones más pequeños */
+        font-size: 14px; /* Ajustar el tamaño de fuente para hacer los botones más pequeños */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 952px) {
+    .cuadrados-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .fila {
+        flex-direction: column; 
+        margin-bottom: 20px; 
+    }
+    .cuadrado {
+        width: 80vw; 
+        height: 80vw; 
+        max-width: 300px; 
+        margin-top: 100px;
+    }
+    .botones-container {
+        justify-content: center; /* Centra los botones horizontalmente */
+    }
+    .botones-container button {
+        max-width: 300px; /* Establecer el mismo ancho máximo que los cuadros */
+        padding: 1px 5px; /* Ajustar el padding para hacer los botones más pequeños */
+        font-size: 14px; /* Ajustar el tamaño de fuente para hacer los botones más pequeños */
+    }
+}
+
+
+
+@media (max-width: 952px) {
+    .cuadrados-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .fila {
+        flex-direction: column; 
+        margin-bottom: 20px; 
+    }
+    .cuadrado {
+        width: 80vw; 
+        height: 80vw; 
+        max-width: 300px; 
+        margin-top: 100px;
+    }
+    .botones-container {
+        justify-content: center; /* Centra los botones horizontalmente */
+    }
+    .botones-container button {
+        max-width: 300px; /* Establecer el mismo ancho máximo que los cuadros */
+        padding: 1px 5px; /* Ajustar el padding para hacer los botones más pequeños */
+        font-size: 14px; /* Ajustar el tamaño de fuente para hacer los botones más pequeños */
+    }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cuadrados-container {
+        flex-wrap: wrap;
+        justify-content: center; 
+        margin-top: 150px;
+    }
+    .cuadrado {
+        width: 45vw; 
+        height: 45vw; 
+        max-width: 500px; 
+        max-height: 500px; 
+        margin: 20px; 
+        margin-top: 100px;
+    }
+    .fila {
+        margin-bottom: 40px; 
+    }
+    .cuadrados-container {
+        margin-bottom: 40px; 
+        
+    }
+    .botones-container {
+        justify-content: center; /* Centra los botones horizontalmente */
+    }
+    .botones-container button {
+        max-width: 300px; /* Establecer el mismo ancho máximo que los cuadros */
+        padding: 1px 5px; /* Ajustar el padding para hacer los botones más pequeños */
+        font-size: 14px; /* Ajustar el tamaño de fuente para hacer los botones más pequeños */
+    }
+}
+
+/* Aumentar el tamaño de la imagen */
+.cuadrado img.ampliada {
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+
+button {
+    padding: 0.8em 2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-right: 15px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+#b1:hover {
+    background-color: #0af6fa;
+    box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 30px cyan, 
+    0 0 60px cyan, 0 0 120px cyan; 
+    color: #fff;
+}
+
+#b2:hover {
+    background-color: #13fa0a;
+    box-shadow: 0 0 5px green, 0 0 15px green, 0 0 30px green, 
+    0 0 60px green, 0 0 120px green; 
+    color: #fff;
+}
+
+#b3:hover {
+    background-color: #ff24b6;
+    box-shadow: 0 0 5px #ff24b6, 0 0 15px #ff24b6, 0 0 30px #ff24b6, 
+    0 0 60px #ff24b6, 0 0 120px #ff24b6; 
+    color: #fff;
+}
+
+#b4:hover {
+    background-color: #FFFF00;
+    box-shadow: 0 0 5px #FFFF00, 0 0 15px #FFFF00, 0 0 30px #FFFF00, 
+    0 0 60px #FFFF00, 0 0 120px #FFFF00; 
+    color: #fff;
+}   
+
+button:active {
+    transform: translateY(-1px);
+}
+
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center; 
+        margin-right: 0; 
+    }
+    body {
+        background-position: center center; 
+        background-repeat: no-repeat;  
+        background-attachment: fixed;
+}
+}
